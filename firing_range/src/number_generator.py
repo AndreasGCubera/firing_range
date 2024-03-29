@@ -1,4 +1,6 @@
 import random
+import logging
+import sys
 
 
 def generate_puzzle(low=1, high=100):
@@ -11,9 +13,12 @@ def make_guess(target):
     while guess is None:
         try:
             guess = int(input("Guess: "))
-        except ValueError:
+        except ValueError as e:
             print("Enter an integer")
-
+            logging.info(e)
+            sys.exit(0)
+        finally:
+            print("Program closing")
     if guess == target:
         return True
     if guess < target:
@@ -36,4 +41,5 @@ def play(tries=8):
 
 
 if __name__ == '__main__':
+    logging.basicConfig(filename="log.txt", level=logging.INFO)
     play()

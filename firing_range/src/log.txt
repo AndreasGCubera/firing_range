@@ -1,0 +1,2 @@
+INFO:root:invalid literal for int() with base 10: 'fifty'
+INFO:root:invalid literal for int() with base 10: 'fifty'
