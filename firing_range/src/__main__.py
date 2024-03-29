@@ -1,16 +1,18 @@
-# This is a sample Python script.
-from re import match
+import random
+import global_coordinates
 
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def roll_dice(sides, dice):
+    return list(random.randint(1, sides) for _ in range(dice))
 
 
 def print_hi():
-
     name = input("What's your name? ")
     print(f"Hi, {name}")
+    dice_list = roll_dice(6, 6)
+    print(dice_list)
     input()
+    longitude = global_coordinates.GlobalCoordinates.longitude.getter
 
 
 def main():
@@ -19,5 +21,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
