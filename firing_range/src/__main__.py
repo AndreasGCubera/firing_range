@@ -12,7 +12,6 @@ def print_hi():
     dice_list = roll_dice(6, 6)
     print(dice_list)
     input()
-    longitude = global_coordinates.GlobalCoordinates.longitude.getter
 
 
 def main():
